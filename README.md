@@ -19,7 +19,7 @@
 2. 添加config.js到根目录
 
    ```
-   {
+   module.exports={
        miUserName: '', //你的小米账号
        miPassword: '', //小米密码
        koa_port: 3001, //服务器端口,方便人工补打卡
