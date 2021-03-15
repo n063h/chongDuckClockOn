@@ -1,0 +1,16 @@
+{
+  "name": "chongDuck",
+  "version": "1.0.0",
+  "description": "冲鸭打卡",
+  "main": "app.js",
+  "author": "hanglv",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "koa-router": "^10.0.0",
+    "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
+    "puppeteer": "^8.0.0",
+    "xiaoai-tts": "^0.6.0"
+  }
+}

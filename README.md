@@ -16,7 +16,7 @@
 
 1. `yarn install`
 
-2. 修改config.js
+2. 添加config.js到根目录
 
    ```
    {
@@ -29,6 +29,7 @@
        pushSecret: '',	//[server酱](https://sct.ftqq.com/)密钥,为推送打卡记录到微信
    }
    ```
+3. 修改koa.vbs里项目路径,添加到<启动>文件夹里以开机启动
 
-3. `node app.js`
+4. `node app.js`
 
