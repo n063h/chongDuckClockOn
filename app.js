@@ -72,13 +72,10 @@ const finishTask = async () => {
         if (todayTaskFinished)
             return;
         const page = await net.login();
-        console.log('1',JSON.stringify(page._client))
         tasks = await net.getTask(page);
-        console.log('2',JSON.stringify(tasks))
         failed = tasks.filter(task => task.status == '去完成');
         let words = failed.map(task => '天猫精灵,' + task.words);
         words.push('天猫精灵,停止');
-        console.log(`words: ${JSON.stringify(words)}`)
         await eventQueue(xiaoai.say, 1e3 * 15, words);
 
 
@@ -92,8 +89,6 @@ const finishTask = async () => {
         else
             net.sendMessage(`失败` ,JSON.stringify(failed));
     } catch (e) {
-        console.log(`error : ${JSON.stringify(e)}`)
-        throw e;
         net.sendMessage('finishTask error',JSON.stringify(e));
     } finally {
         console.log(`tasks :${JSON.stringify(tasks)}\n failed :${JSON.stringify(failed)} `);
